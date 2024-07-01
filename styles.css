@@ -1,0 +1,138 @@
+/* RESET */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Root Declaration */
+
+:root {
+  /* Color */
+
+  /* Primary */
+  --Cyan: hsl(180, 62%, 55%);
+  --lightGreen: hsl(158, 36%, 37%);
+  --lightBrown: hsl(32, 89%, 75%);
+  --lilac: hsl(300, 26%, 71%);
+  --dodgerBlue: hsl(210, 100%, 56%);
+
+  /* Neutral */
+  --darkBrown: hsl(212, 21%, 14%);
+  --transparentWhite: hsl(0, 0%, 100%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+}
+
+/* General Styling */
+
+body {
+  background-color: var(--lightBrown);
+  margin: 10px 0 50px 0;
+  overflow: auto;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+/* Block && Element */
+
+.main {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+.main__card {
+  background-color: var(--transparentWhite);
+  border-radius: 1em;
+  border: 1px double var(--grayishBlue);
+  display: flex;
+  flex-flow: column nowrap;
+  width: min(50em, 95%);
+}
+.container__one__image {
+  border-radius: 1em 1em 0 0;
+  height: 100%;
+  width: 100%;
+}
+.container__two {
+  padding: 1em;
+}
+.section__title {
+  color: var(--darkBrown);
+  font-size: 1.5em;
+  font-family: "Fraunces", "sans-serif";
+  margin: 0.5em 0;
+  text-transform: uppercase;
+  word-spacing: 3px;
+}
+.section__information__text {
+  font-family: "Red Hat Display", sans-serif;
+}
+.section__information__span {
+  color: var(--dodgerBlue);
+  display: block;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+}
+
+article h3 {
+  text-transform: capitalize;
+  text-align: center;
+  font: 400 1.4em "Fraunces", "sans-serif";
+  padding-top: 0.5em;
+}
+
+.article {
+  border: none;
+  border-top: 2px solid var(--lightGreen);
+  border-bottom: 2px solid var(--lightGreen);
+  padding: 0.8em 0;
+}
+
+.attribution {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  bottom: 0;
+  font-size: 1em;
+  padding: 0.8em 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+  .main__container {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+  }
+  .container__one__image {
+    border-radius: 0 15px 15px 0;
+  }
+  .container__one {
+    flex: 2 0 100px;
+  }
+  .container__two {
+    flex: 3 0 100px;
+    padding: 1em;
+  }
+}
+/* Modifiers */
+
+.attribution--secondary {
+  color: hsl(202, 81%, 54%);
+}
+
+.attribution--primary {
+  color: var(--lightGreen);
+}
+
+.attribution--primary:hover,
+.attribution--secondary:hover {
+  color: red;
+}
